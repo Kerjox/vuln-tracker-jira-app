@@ -1,0 +1,17 @@
+modules:
+  jira:issuePanel:
+    - key: vuln-tracker-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: vuln-tracker
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  id: ari:cloud:ecosystem::app/9b8d9103-6fc4-4b69-b792-e571f600d739
